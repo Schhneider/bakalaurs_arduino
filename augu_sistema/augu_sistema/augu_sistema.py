@@ -5,7 +5,7 @@ from pathlib import Path
 from savienojums import get_augsnes_mitrums, get_dht22, ieslegt_pumpi
 
 # Iestatijumu fails. Šeit saglabājās vērtības no iestatījumu sadaļas
-IESTATIJUMU_FAILS = Path("iestatijumi.json")
+IESTATIJUMU_FAILS = Path.home() / "Documents" / "bakalaurs_arduino" / "iestatijumi.json"
 
 # Galvenā lietotnes klase. Šeit atrodas visa fona loģika sistēmai
 class State(rx.State):

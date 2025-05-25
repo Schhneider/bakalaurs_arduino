@@ -16,14 +16,14 @@ void setup() {
 }
 
 void loop() {
-  if (Serial.available() > 0) {
+  if (Serial.available() > 0) { // Funkcija pumpja ieslēgšanai un ieslēgsanai
     String komanda = Serial.readStringUntil('\n');
     komanda.trim();
 
     if (komanda == "P_ON") {
-      digitalWrite(PUMP_PIN, HIGH);
+      digitalWrite(PUMP_PIN, HIGH); // Ja no Python tiek iegūts "P_ON", tad ieslēdz pumpi
     } else if (komanda == "P_OFF") {
-      digitalWrite(PUMP_PIN, LOW);
+      digitalWrite(PUMP_PIN, LOW); // Ja no Python tiek iegūts "P_OFF", tad izslēdz pumpi
     }
   }
   
