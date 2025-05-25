@@ -182,7 +182,7 @@ def settings() -> rx.Component:
                 ),
                 rx.button("Saglabāt iestatījumus", on_click=State.saglabat_iestatijumus, color_scheme="green"), # Iestatījumu saglabāšanas poga. Pie nospiešanas saglabā
                 rx.text(State.iestatijumu_status, size="2", color="gray"),
-                rx.moment(interval=1000, on_change=State.notirit_iestatijumu_status, display="none"),
+                rx.moment(interval=6000, on_change=State.notirit_iestatijumu_status, display="none"),
                 spacing="4",
                 padding="6",
             ),
